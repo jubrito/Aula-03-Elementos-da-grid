@@ -1,0 +1,36 @@
+/*transformando o body em um elemento em forma de grade, montando um template*/
+body {
+   margin: 0;
+    display: grid; /*era block por padrão*/
+    grid-template-areas: 'header header header aside' /*define as colunas e linhas (header possui uma linha e 4 colunas)*/
+                         'navbar navbar navbar aside' /* . = nao consegue colocar conteudo algum */
+                         'section section section aside'
+                         'footer footer footer footer';
+    grid-template-rows: 20vh 5vh 50vh 30vh; /*altura do view é 100*/
+    grid-gap: 10px;
+}
+
+header{
+    grid-area:header;
+    background-color: red;
+}
+
+nav{
+    grid-area:navbar;
+    background-color: blue;
+}
+
+section{
+    grid-area: section;
+    background-color: lawngreen;
+}
+
+aside{
+    grid-area: aside;
+    background-color: yellow;
+}
+
+footer{
+    grid-area: footer;
+    background-color: blueviolet;
+}
